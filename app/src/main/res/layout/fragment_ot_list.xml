@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F"
-    tools:context=".profileFragment">
+    android:background="#FF0"
+    tools:context=".otListFrag">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="My Profile" />
+        android:text="Other Listings" />
 
 </FrameLayout>

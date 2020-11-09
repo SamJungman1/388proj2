@@ -8,10 +8,30 @@
     tools:context=".MainActivity">
 
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/profileFragment"
         android:layout_width="412dp"
         android:layout_height="681dp"
         class="com.example.proj2.profileFragment"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/otListFrag"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.otListFrag"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/myListFrag"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.myListFrag"
         app:layout_constraintBottom_toTopOf="@id/myList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
