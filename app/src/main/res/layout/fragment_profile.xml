@@ -3,12 +3,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F"
-    tools:context=".profileFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="My Profile" />
-
-</FrameLayout>
+    android:background="#0000"
+    tools:context=".profileFragment"/>
