@@ -11,14 +11,14 @@ create table user
     Username varchar(45) not null,
     Password varchar(200) not null,/*secure*/
     Tag varchar(45),
-    FirstName varchar(45),
-    LastName varchar(45),
+    Firstname varchar(45),
+    Lastname varchar(45),
 	Address varchar(45), 
     City varchar(45),
-    ZipCode varchar(45) not null,
+    Zipcode varchar(45) not null,
     State varchar(45) not null,
     Country varchar(45) not null,
-    PicturePointer varchar(100)
+    Picturepointer varchar(100)
 )engine=InnoDB;
 
 

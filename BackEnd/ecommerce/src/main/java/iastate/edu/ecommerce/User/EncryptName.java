@@ -22,7 +22,7 @@ public class EncryptName {
         System.arraycopy(hash, 0, hashPlusSalt, 0, hash.length);
         System.arraycopy(salt, 0, hashPlusSalt, hash.length, salt.length);
 
-        return new StringBuilder().append("{SSHA}")
+        return new StringBuilder()
                 .append(Base64.getEncoder().encodeToString(hashPlusSalt))
                 .toString();
     }

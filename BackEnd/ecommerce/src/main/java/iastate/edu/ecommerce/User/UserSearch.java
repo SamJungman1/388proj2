@@ -1,36 +1,30 @@
 package iastate.edu.ecommerce.User;
 
-public class UserLite {
-    private String email;
+public class UserSearch {
     private String username;
     private String tag;
     private String firstName;
     private String lastName;
-    private String address;
     private String city;
-    private String zipCode;
     private String state;
     private String country;
 
-    public UserLite(String email,String username, String tag,String firstName,String lastName,String address,String city,String zipCode,String state,String country)
+    UserSearch(String username, String tag, String firstName, String lastName, String city,String state,String country)
     {
-        this.email = email;
         this.username = username;
         this.tag = tag;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.address = address;
         this.city = city;
-        this.zipCode = zipCode;
         this.state = state;
         this.country = country;
     }
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getCity() {
         return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getTag() {
@@ -41,13 +35,7 @@ public class UserLite {
         this.tag = tag;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getUsername() {
         return username;
@@ -65,9 +53,7 @@ public class UserLite {
         this.country = country;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+
 
     public String getState() {
         return state;
@@ -77,9 +63,7 @@ public class UserLite {
         return country;
     }
 
-    public String getAddress() {
-        return address;
-    }
+
 
     public String getFirstName() {
         return firstName;
@@ -89,9 +73,7 @@ public class UserLite {
         return lastName;
     }
 
-    public String getZipCode() {
-        return zipCode;
-    }
+
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -99,10 +81,6 @@ public class UserLite {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
     }
 
 }

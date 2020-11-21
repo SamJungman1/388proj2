@@ -30,11 +30,11 @@ public class User
     @NotFound(action = NotFoundAction.IGNORE)
     private String tag;
 
-    @Column(name = "FirstName")
+    @Column(name = "Firstname")
     @NotFound(action = NotFoundAction.IGNORE)
     private String firstName;
 
-    @Column(name = "LastName")
+    @Column(name = "Lastname")
     @NotFound(action = NotFoundAction.IGNORE)
     private String lastName;
 
@@ -42,7 +42,7 @@ public class User
     @NotFound(action = NotFoundAction.IGNORE)
     private String email;
 
-    @Column(name = "ZipCode")
+    @Column(name = "Zipcode")
     @NotFound(action = NotFoundAction.IGNORE)
     private String zipCode;
 
@@ -62,7 +62,7 @@ public class User
     @NotFound(action = NotFoundAction.IGNORE)
     private String country;
 
-    @Column(name = "PicturePointer")
+    @Column(name = "Picturepointer")
     @NotFound(action = NotFoundAction.IGNORE)
     private String picturePointer;
 
@@ -104,6 +104,14 @@ public class User
 
     public void setPicturePointer(String picturePointer) {
         this.picturePointer = picturePointer;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getTag() {
+        return tag;
     }
 
     public void setState(String state) {
