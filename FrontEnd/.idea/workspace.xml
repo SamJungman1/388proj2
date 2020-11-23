@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e39eea8-258d-42f4-ab91-2fd5b55842d7" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/proj2/ClickListener.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/proj2/otAdapter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_man_item.xml" afterDir="false" />
@@ -21,6 +22,16 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_listing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_listing.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_new_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_new_account.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_other_listing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_other_listing.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../BackEnd/ecommerce/src/main/java/iastate/edu/ecommerce/Project/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/ecommerce/src/main/java/iastate/edu/ecommerce/Project/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/ecommerce/src/main/java/iastate/edu/ecommerce/Project/Repo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd/ecommerce/src/main/java/iastate/edu/ecommerce/Project/RepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd/ecommerce/src/main/java/iastate/edu/ecommerce/Project/RepositoryImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+>>>>>>> e5112b20ffd9527c10044ffc9dfbf6901eef17d4
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +83,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../project1" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/cs410/company3" />
+    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+>>>>>>> e5112b20ffd9527c10044ffc9dfbf6901eef17d4
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -176,6 +197,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="669" y="122" key="#FrontEnd" timestamp="1606137652783">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="122" key="#FrontEnd/1920.-534.1707.933/0.0.1920.1040@0.0.1920.1040" timestamp="1606137652783" />
+    <state x="477" y="266" key="#PSD" timestamp="1606137229585">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="477" y="266" key="#PSD/1920.-534.1707.933/0.0.1920.1040@0.0.1920.1040" timestamp="1606137229585" />
     <state x="566" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1606132340470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -185,12 +214,21 @@
     </state>
     <state x="540" y="275" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606152028123" />
     <state x="540" y="275" key="AndroidCreateResourceFileDialog/1920.-534.1707.933/0.0.1920.1040@0.0.1920.1040" timestamp="1605744577858" />
+<<<<<<< HEAD
     <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1606151291006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606151291006" />
     <state x="260" y="278" key="FileChooserDialogImpl/1920.-534.1707.933/0.0.1920.1040@0.0.1920.1040" timestamp="1605918209455" />
     <state width="1462" height="237" key="GridCell.Tab.0.bottom" timestamp="1606152386246">
+=======
+    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1606137217021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606106727706" />
+    <state x="260" y="278" key="FileChooserDialogImpl/1920.-534.1707.933/0.0.1920.1040@0.0.1920.1040" timestamp="1606137217021" />
+    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1606128151777">
+>>>>>>> e5112b20ffd9527c10044ffc9dfbf6901eef17d4
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1462" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606152386246" />
