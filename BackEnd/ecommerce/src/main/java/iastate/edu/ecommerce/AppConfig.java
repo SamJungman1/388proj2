@@ -1,5 +1,7 @@
-package iastate.edu.ecommerce.Project;
+package iastate.edu.ecommerce;
 
+import iastate.edu.ecommerce.Project.Repo;
+import iastate.edu.ecommerce.Project.RepositoryImp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

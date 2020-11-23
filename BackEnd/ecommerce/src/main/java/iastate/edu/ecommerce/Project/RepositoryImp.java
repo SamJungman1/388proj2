@@ -65,6 +65,68 @@ public class RepositoryImp implements Repo {
         store.executeUpdate();
     }
 
+    @Override
+    @Transactional
+    public void listingSave(Listings listings) {
+        String str = "call Store_Listing(" + '"'+ listings.getListingName() + '"'+ "," + '"'+ listings.getListingDescription() + '"'+ "," + listings.getTimestamp() + ")";
+        Query store = em.createNativeQuery(str);
+        store.executeUpdate();
+    }
+
+    @Override
+    public int reverseLookupListings(int userId, int timestamp) {
+        String str = "call Reverse_Lookup_Listings(" + userId + "," + timestamp + ")";
+        Query output = em.createNativeQuery(str);
+
+        List<Integer> out = output.getResultList();
+
+        return out.get(0);
+    }
+
+    @Override
+    public int checkHashTags(String hashtag) {
+        String str = "call Check_Hashtag(" +'"'+hashtag+'"'+")";
+        Query output = em.createNativeQuery(str);
+
+        List<Integer> out = output.getResultList();
+
+        return out.get(0);
+    }
+
+    @Override
+    @Transactional
+    public void storeHashTags(String hashtag) {
+        String str = "call Store_Hashtag(" +'"'+hashtag+'"'+")";
+        Query output = em.createNativeQuery(str);
+        output.executeUpdate();
+    }
+
+    @Override
+    public int getHashtagId(String hashtag) {
+        String str = "call Get_Hashtag_Id(" +'"'+hashtag+'"'+")";
+        Query output = em.createNativeQuery(str);
+
+        List<Integer> out = output.getResultList();
+
+        return out.get(0);
+    }
+
+    @Override
+    @Transactional
+    public void storeHashTagsToListings(int lId, int tagId) {
+        String str = "call Store_Hashtag_To_Listing(" + lId + "," + tagId + ")";
+        Query output = em.createNativeQuery(str);
+        output.executeUpdate();
+    }
+
+    @Override
+    public List getListByName(String name) {
+        String str = "call Store_Hashtag_To_Listing(" + '"'+ name + '"' +  ")";
+        Query output = em.createNativeQuery(str);
+        List out = output.getResultList();
+        return out = output.getResultList();
+    }
+
 
     @Override
     public String value() {
