@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".newAccount">
+
+    <TextView
+        android:id="@+id/topMargin5"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <EditText
+        android:id="@+id/newUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMargin5"/>
+    <EditText
+        android:id="@+id/newPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newUsername"/>
+    <EditText
+        android:id="@+id/newEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email (Keep as same email if you want to edit)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newPassword"/>
+    <EditText
+        android:id="@+id/newFN"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="First Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newEmail"/>
+    <EditText
+        android:id="@+id/newLN"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Last Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newFN"/>
+
+    <EditText
+        android:id="@+id/newAddr"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newLN"/>
+    <EditText
+        android:id="@+id/newState"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="State"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newAddr"/>
+
+    <EditText
+        android:id="@+id/newCity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="City"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newState"/>
+
+    <EditText
+        android:id="@+id/newCountry"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Country"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newCity"/>
+
+    <EditText
+        android:id="@+id/newZipcode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Zipcode"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newCountry"/>
+
+    <Button
+        android:id="@+id/newAccount"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Create/Edit Account"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newZipcode"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

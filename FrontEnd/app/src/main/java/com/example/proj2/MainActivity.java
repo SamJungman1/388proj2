@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.DownloadManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,16 +12,38 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+
 public class MainActivity extends AppCompatActivity {
-    String username;
+    String loggedInKey;
+    String loggedInEmail;
+    final String urlBase = "http://10.0.2.2:8080/";
+    RequestQueue mRequestQueue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mRequestQueue = Volley.newRequestQueue(getApplicationContext());
 
         //Main Activity Manager
         Button profileButton = (Button) findViewById(R.id.profile);
@@ -33,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
         final Fragment newListFrag = (newListing) getSupportFragmentManager().findFragmentById(R.id.newListing);
         final Fragment myListing = (myListing) getSupportFragmentManager().findFragmentById(R.id.myListing);
         final Fragment otListing = (otherListing) getSupportFragmentManager().findFragmentById(R.id.otherListing);
+        final Fragment otProfile = (otherProfile) getSupportFragmentManager().findFragmentById(R.id.otherProfileFrag);
+        final Fragment newProfile = (newAccount) getSupportFragmentManager().findFragmentById(R.id.newAccount);
+        final Fragment login = (loginForm) getSupportFragmentManager().findFragmentById(R.id.loginFrag);
+        final Fragment addRating = (addRating) getSupportFragmentManager().findFragmentById(R.id.newRating);
 
         FragmentManager fm = getSupportFragmentManager();
 
@@ -42,7 +69,10 @@ public class MainActivity extends AppCompatActivity {
         ((newListing) newListFrag).gone();
         ((otherListing) otListing).gone();
         ((myListing) myListing).gone();
-
+        ((otherProfile) otProfile).gone();
+        ((newAccount) newProfile).gone();
+        ((loginForm) login).gone();
+        ((addRating) addRating).gone();
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +83,10 @@ public class MainActivity extends AppCompatActivity {
                 ((newListing) newListFrag).gone();
                 ((otherListing) otListing).gone();
                 ((myListing) myListing).gone();
+                ((otherProfile) otProfile).gone();
+                ((newAccount) newProfile).gone();
+                ((loginForm) login).gone();
+                ((addRating) addRating).gone();
             }
         });
 
@@ -65,6 +99,10 @@ public class MainActivity extends AppCompatActivity {
                 ((otListFrag) otListFrag).gone();
                 ((otherListing) otListing).gone();
                 ((myListing) myListing).gone();
+                ((otherProfile) otProfile).gone();
+                ((newAccount) newProfile).gone();
+                ((loginForm) login).gone();
+                ((addRating) addRating).gone();
             }
         });
 
@@ -77,6 +115,10 @@ public class MainActivity extends AppCompatActivity {
                 ((newListing) newListFrag).gone();
                 ((otherListing) otListing).gone();
                 ((myListing) myListing).gone();
+                ((otherProfile) otProfile).gone();
+                ((newAccount) newProfile).gone();
+                ((loginForm) login).gone();
+                ((addRating) addRating).gone();
             }
         });
 
@@ -127,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
                 ((newListing) newListFrag).show();
                 ((otherListing) otListing).gone();
                 ((myListing) myListing).gone();
+                ((otherProfile) otProfile).gone();
+                ((newAccount) newProfile).gone();
+                ((loginForm) login).gone();
+                ((addRating) addRating).gone();
             }
         });
 
@@ -148,9 +194,107 @@ public class MainActivity extends AppCompatActivity {
                 ((otListFrag) otListFrag).gone();
                 ((otherListing) otListing).gone();
                 ((myListing) myListing).gone();
+                ((otherProfile) otProfile).gone();
+                ((newAccount) newProfile).gone();
+                ((loginForm) login).gone();
+                ((addRating) addRating).gone();
+            }
+        });
+
+        //My Profile Fragment Manager
+        updateMyProfile("", "" , "", "", "", "", "", "", "", "", 0.0);
+        Button createAccountButton = (Button) findViewById(R.id.newAccountButton);
+        Button loginButton = (Button) findViewById(R.id.loginButton);
+        createAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((profileFragment) profileFrag).gone();
+                ((myListFrag) myListFrag).gone();
+                ((newListing) newListFrag).gone();
+                ((otListFrag) otListFrag).gone();
+                ((otherListing) otListing).gone();
+                ((myListing) myListing).gone();
+                ((otherProfile) otProfile).gone();
+                ((newAccount) newProfile).show();
+                ((loginForm) login).gone();
+                ((addRating) addRating).gone();
+            }
+        });
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((profileFragment) profileFrag).gone();
+                ((myListFrag) myListFrag).gone();
+                ((newListing) newListFrag).gone();
+                ((otListFrag) otListFrag).gone();
+                ((otherListing) otListing).gone();
+                ((myListing) myListing).gone();
+                ((otherProfile) otProfile).gone();
+                ((newAccount) newProfile).gone();
+                ((loginForm) login).show();
+                ((addRating) addRating).gone();
+            }
+        });
+
+        //Create Account Fragment Manager
+
+        //Login Fragment Manager
+        Button loginAcc = (Button) findViewById(R.id.loginAcc);
+        loginAcc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText emailLogin = (EditText) findViewById(R.id.emailLogin);
+                EditText passLogin = (EditText) findViewById(R.id.passLogin);
+
+                String email = emailLogin.getText().toString();
+                String pass = passLogin.getText().toString();
+
+                final JSONObject loginJson = new JSONObject();
+                try {
+                    loginJson.put("email", email);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    loginJson.put("password", pass);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                JsonObjectRequest login = new JsonObjectRequest(Request.Method.GET, urlBase + "/User/Login", null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                }) {
+                    @Override
+                    public String getBodyContentType() {
+                        return "application/json; charset=utf-8";
+                    }
+
+                    @Override
+                    public byte[] getBody() {
+                        try {
+                            return loginJson == null ? null : loginJson.toString().getBytes("utf-8");
+                        } catch (UnsupportedEncodingException uee) {
+                            //Log.v("Unsupported Encoding while trying to get the bytes", data);
+                            return null;
+                        }
+                    }
+
+                };;
+                mRequestQueue.add(login);
             }
         });
     }
+
+
+
 
     /**
      * Populates the recyclyerview in the OTListing fragment with a sorted list of items from the backend
@@ -168,7 +312,7 @@ public class MainActivity extends AppCompatActivity {
     public void populateMyListings()
     {
         //TODO, should grab user data and then populate all listings that user has made
-        if(username == null)
+        if(loggedInEmail == null)
             return;
     }
 
@@ -181,11 +325,73 @@ public class MainActivity extends AppCompatActivity {
      */
     public void createNewListing(String name, String desc, String hashtags, double cost)
     {
-        if(username != null)
+        if(loggedInEmail != null)
         {
             //TODO send listing to backend
         }
     }
 
-    public void showOtherListing()
+    public void showOtherListing(String name, String owner, String desc, double cost, boolean available, int interested, String hashtags)
+    {
+        TextView otListingName = (TextView) findViewById(R.id.otItemName);
+        TextView otListingOwner = (TextView) findViewById(R.id.otItemOwner);
+        TextView otListingDesc = (TextView) findViewById(R.id.otItemDesc);
+        TextView otListingCost = (TextView) findViewById(R.id.otItemCost);
+        TextView otListingInter = (TextView) findViewById(R.id.otItemInterested);
+        TextView otListingAva = (TextView) findViewById(R.id.otItemAvailable);
+        TextView otListingHash = (TextView) findViewById(R.id.otHashtags);
+
+        otListingName.setText("Name: " + name);
+        otListingOwner.setText("Owner: " + owner);
+        otListingDesc.setText("Description: " + desc);
+        otListingCost.setText("Cost: " + cost);
+        otListingInter.setText("Available: " + available);
+        otListingAva.setText("Interested: " + interested);
+        otListingHash.setText("Hashtags: " + hashtags);
+
+    }
+
+    public void showMyListing(String name, String desc, double cost, boolean available, int interested, String hashtags)
+    {
+        TextView myListingName = (TextView) findViewById(R.id.myItemName);
+        TextView myListingDesc = (TextView) findViewById(R.id.myItemDesc);
+        TextView myListingCost = (TextView) findViewById(R.id.myItemCost);
+        TextView myListingInter = (TextView) findViewById(R.id.myItemInterested);
+        TextView myListingAva = (TextView) findViewById(R.id.myItemAvailable);
+        TextView myListingHash = (TextView) findViewById(R.id.myHashtags);
+
+        myListingName.setText("Name: " + name);
+        myListingDesc.setText("Description: " + desc);
+        myListingCost.setText("Cost: " + cost);
+        myListingInter.setText("Available: " + available);
+        myListingAva.setText("Interested: " + interested);
+        myListingHash.setText("Hashtags: " + hashtags);
+    }
+
+    public void updateMyProfile(String username, String tag, String email, String fn, String ln, String country, String city, String state, String addr, String zip, Double rating)
+    {
+        TextView myUsername = (TextView) findViewById(R.id.myUsername);
+        TextView myTag = (TextView) findViewById(R.id.myTag);
+        TextView myEmail = (TextView) findViewById(R.id.myEmail);
+        TextView myFN = (TextView) findViewById(R.id.myFN);
+        TextView myLN = (TextView) findViewById(R.id.myLN);
+        TextView myCountry = (TextView) findViewById(R.id.myCountry);
+        TextView myCity = (TextView) findViewById(R.id.myCity);
+        TextView myState = (TextView) findViewById(R.id.myState);
+        TextView myAddr = (TextView) findViewById(R.id.myAddr);
+        TextView myZip = (TextView) findViewById(R.id.myZip);
+        TextView myRating = (TextView) findViewById(R.id.myRating);
+
+        myUsername.setText("Username: " + username);
+        myTag.setText("Tag: " + tag);
+        myEmail.setText("Email: " + email);
+        myFN.setText("First Name: " + fn);
+        myLN.setText("Last Name: " + ln);
+        myCountry.setText("Country: " + country);
+        myCity.setText("City: " + city);
+        myState.setText("State: " + state);
+        myAddr.setText("Address: " + addr);
+        myZip.setText("ZIP: " + zip);
+        myRating.setText("Rating: " + rating);
+    }
 }

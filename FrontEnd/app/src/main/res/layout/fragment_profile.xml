@@ -1,7 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#0000"
-    tools:context=".profileFragment"/>
+    android:weightSum="3"
+    tools:context=".profileFragment">
+
+    <TextView
+        android:id="@+id/topMargin8"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/myUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Username:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMargin8"/>
+    <TextView
+        android:id="@+id/myTag"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Tag:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myUsername"/>
+    <TextView
+        android:id="@+id/myEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Email:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myTag"/>
+    <TextView
+        android:id="@+id/myFN"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="First Name:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myEmail"/>
+    <TextView
+        android:id="@+id/myLN"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Last Name: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myFN"/>
+    <TextView
+        android:id="@+id/myCity"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp"
+        android:text="City"
+        app:layout_constraintLeft_toRightOf="@id/myCountry"
+        app:layout_constraintTop_toBottomOf="@id/myLN"
+        app:layout_constraintRight_toLeftOf="@+id/myState"
+        />
+    <TextView
+        android:id="@+id/myState"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp"
+        android:text="State"
+        app:layout_constraintLeft_toRightOf="@id/myCity"
+        app:layout_constraintTop_toBottomOf="@id/myLN"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/myCountry"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="Country:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myLN"
+        app:layout_constraintRight_toLeftOf="@+id/myCity"/>
+
+    <TextView
+        android:id="@+id/myAddr"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Address:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myCountry"/>
+
+    <TextView
+        android:id="@+id/myZip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Zip:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myAddr"/>
+
+    <TextView
+        android:id="@+id/myRating"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Rating"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myZip"/>
+
+
+    <Button
+        android:id="@+id/newAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="Create/Edit Account"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myRating"
+        app:layout_constraintRight_toLeftOf="@+id/loginButton"/>
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="Login"
+        app:layout_constraintLeft_toRightOf="@id/newAccountButton"
+        app:layout_constraintTop_toBottomOf="@id/myRating"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

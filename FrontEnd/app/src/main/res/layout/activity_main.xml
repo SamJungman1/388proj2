@@ -57,6 +57,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <fragment
+        android:id="@+id/newAccount"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.newAccount"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/otherProfileFrag"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.otherProfile"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/loginFrag"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.loginForm"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/newRating"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.addRating"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <fragment
         android:id="@+id/myListFrag"

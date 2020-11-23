@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="3"
+    tools:context=".otherProfile">
+
+    <TextView
+        android:id="@+id/topMargin7"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/otUsername"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Username:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMargin7"/>
+    <TextView
+        android:id="@+id/otTag"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Tag:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otUsername"/>
+    <TextView
+        android:id="@+id/otFN"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="First Name:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otTag"/>
+    <TextView
+        android:id="@+id/otLN"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Last Name: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otFN"/>
+
+    <TextView
+        android:id="@+id/otCity"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="65dp"
+        android:text="City"
+        app:layout_constraintLeft_toRightOf="@id/otCountry"
+        app:layout_constraintTop_toBottomOf="@id/otLN"
+        app:layout_constraintRight_toLeftOf="@+id/otState"
+        />
+    <TextView
+        android:id="@+id/otState"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="65dp"
+        android:text="State"
+        app:layout_constraintLeft_toRightOf="@id/otCity"
+        app:layout_constraintTop_toBottomOf="@id/otLN"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/otCountry"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:text="Country"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otLN"
+        app:layout_constraintRight_toLeftOf="@+id/otCity"/>
+
+    <TextView
+        android:id="@+id/otRating"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Rating"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otCountry"/>
+
+
+    <Button
+        android:id="@+id/otRatingButton"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:text="Rate User"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otRating"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
