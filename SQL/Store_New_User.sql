@@ -1,6 +1,6 @@
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Store_New_User`(
 	IN Email1 varchar(45), 
-	IN Username1 varchar(45),
+	IN Username1 varchar(75),
 	IN Password1 varchar(45),
     IN tag1 varchar(45),
 	IN First_Name1 varchar(45),
