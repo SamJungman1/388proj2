@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".newListing">
+
+    <TextView
+        android:id="@+id/topMargin"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <EditText
+        android:id="@+id/itemName"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:hint="Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMargin"/>
+    <EditText
+        android:id="@+id/itemDesc"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:hint="Description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemName"/>
+    <EditText
+        android:id="@+id/itemCost"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:hint="Cost (Enter a number)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDesc"/>
+    <EditText
+        android:id="@+id/hashtags"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:hint="Hashtags (Start each with a # and separate with a space)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemCost"/>
+    <Button
+        android:id="@+id/newItemButton"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:hint="Create"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hashtags"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

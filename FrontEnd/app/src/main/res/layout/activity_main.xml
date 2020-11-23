@@ -28,6 +28,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <fragment
+        android:id="@+id/newListing"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.newListing"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/myListing"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.myListing"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/otherListing"
+        android:layout_width="412dp"
+        android:layout_height="681dp"
+        class="com.example.proj2.otherListing"
+        app:layout_constraintBottom_toTopOf="@id/myList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <fragment
         android:id="@+id/myListFrag"
         android:layout_width="412dp"
         android:layout_height="681dp"

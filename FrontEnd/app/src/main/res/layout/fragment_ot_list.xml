@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".otListFrag">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/topMargin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Other Listings" />
+        android:layout_height="65dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/searchEntry"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:hint="Search Entry"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMargin" />
+
+    <Spinner
+        android:id="@+id/searchAttr"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/topMargin"
+        app:layout_constraintLeft_toRightOf="@+id/searchEntry" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Search"
+        app:layout_constraintTop_toBottomOf="@+id/searchAttr"
+        app:layout_constraintLeft_toRightOf="@+id/searchEntry"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/otherListings"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchEntry"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

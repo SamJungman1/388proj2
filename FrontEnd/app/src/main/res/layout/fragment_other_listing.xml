@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".otherListing">
+
+    <TextView
+        android:id="@+id/topMargin4"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/otItemName"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Name:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMargin4"/>
+    <TextView
+        android:id="@+id/otItemOwner"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Owner:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otItemName"/>
+    <TextView
+        android:id="@+id/otItemDesc"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Description:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otItemOwner"/>
+    <TextView
+        android:id="@+id/otItemCost"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="65dp"
+        android:text="Cost:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otItemDesc"
+        app:layout_constraintRight_toLeftOf="@+id/otItemAvailable" />
+    <TextView
+        android:id="@+id/otItemAvailable"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="65dp"
+        android:text="Available:"
+        app:layout_constraintLeft_toRightOf="@id/otItemCost"
+        app:layout_constraintTop_toBottomOf="@id/otItemDesc"
+        app:layout_constraintRight_toLeftOf="@+id/otItemInterested"
+        />
+    <TextView
+        android:id="@+id/otItemInterested"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="65dp"
+        android:text="Interested:"
+        app:layout_constraintLeft_toRightOf="@id/otItemAvailable"
+        app:layout_constraintTop_toBottomOf="@id/otItemDesc"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/otHashtags"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Hashtags:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otItemCost"/>
+    <Button
+        android:id="@+id/addInterested"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="65dp"
+        android:text="Add interested"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otHashtags"
+        app:layout_constraintRight_toLeftOf="@+id/chatUser"/>
+
+    <Button
+        android:id="@+id/chatUser"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="65dp"
+        android:text="Chat With User"
+        app:layout_constraintLeft_toRightOf="@id/addInterested"
+        app:layout_constraintTop_toBottomOf="@id/otHashtags"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
