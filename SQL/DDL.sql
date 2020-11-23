@@ -8,7 +8,7 @@ create table user
 (
 	Id int(11) primary key auto_increment,
     Email varchar(45) unique,
-    Username varchar(45) not null,
+    Username varchar(75) not null,
     Password varchar(200) not null,/*secure*/
     Tag varchar(45),
     Firstname varchar(45),
@@ -21,5 +21,16 @@ create table user
     Picturepointer varchar(100)
 )engine=InnoDB;
 
+drop table if exists Tokens;
+create table Tokens
+(
+Id int(11) primary key auto_increment,
+val varchar(200) unique not null,
+email varchar(45) unique,
+foreign key(email) references User(email),
+expires int(255) not null
+ 
+ 
+)engine=InnoDB;
 
 

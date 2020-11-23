@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Check_Tag`(IN Username1 varchar(45), IN Tag1 varchar(45))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Check_Tag`(IN Username1 varchar(75), IN Tag1 varchar(45))
 BEGIN
 SELECT 
 	Case 
