@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@id/newCountry"/>
 
     <Button
-        android:id="@+id/newAccount"
+        android:id="@+id/newAccountSend"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:text="Create/Edit Account"

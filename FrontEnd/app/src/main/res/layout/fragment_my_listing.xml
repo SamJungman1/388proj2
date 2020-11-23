@@ -19,14 +19,14 @@
         android:id="@+id/myItemName"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Name:"
+        android:text="Name: myTestItem"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topMargin3"/>
     <TextView
         android:id="@+id/myItemDesc"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Description:"
+        android:text="Description: Spagheeeettiiiii"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myItemName"/>
     <TextView
@@ -34,7 +34,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="65dp"
-        android:text="Cost:"
+        android:text="Cost: 250"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myItemDesc"
         app:layout_constraintRight_toLeftOf="@+id/myItemAvailable" />
@@ -43,7 +43,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="65dp"
-        android:text="Available:"
+        android:text="Available: True"
         app:layout_constraintLeft_toRightOf="@id/myItemCost"
         app:layout_constraintTop_toBottomOf="@id/myItemDesc"
         app:layout_constraintRight_toLeftOf="@+id/myItemInterested"
@@ -53,7 +53,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="65dp"
-        android:text="Interested:"
+        android:text="Interested: 4"
         app:layout_constraintLeft_toRightOf="@id/myItemAvailable"
         app:layout_constraintTop_toBottomOf="@id/myItemDesc"
         app:layout_constraintRight_toRightOf="parent"
@@ -62,7 +62,7 @@
         android:id="@+id/myHashtags"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Hashtags:"
+        android:text="Hashtags: #silly #goofy #code"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myItemCost"/>
     <Button

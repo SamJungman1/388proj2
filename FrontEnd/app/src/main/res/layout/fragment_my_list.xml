@@ -23,6 +23,7 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myListingList"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         app:layout_constraintTop_toBottomOf="@id/topMargin2"

@@ -18,21 +18,21 @@
         android:id="@+id/otItemName"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Name:"
+        android:text="Name: testListing"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topMargin4"/>
     <TextView
         android:id="@+id/otItemOwner"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Owner:"
+        android:text="Owner: Sam J"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/otItemName"/>
     <TextView
         android:id="@+id/otItemDesc"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Description:"
+        android:text="Description: This is a test item"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/otItemOwner"/>
     <TextView
@@ -40,7 +40,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="65dp"
-        android:text="Cost:"
+        android:text="Cost: 1000"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/otItemDesc"
         app:layout_constraintRight_toLeftOf="@+id/otItemAvailable" />
@@ -49,7 +49,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="65dp"
-        android:text="Available:"
+        android:text="Available: True"
         app:layout_constraintLeft_toRightOf="@id/otItemCost"
         app:layout_constraintTop_toBottomOf="@id/otItemDesc"
         app:layout_constraintRight_toLeftOf="@+id/otItemInterested"
@@ -59,7 +59,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="65dp"
-        android:text="Interested:"
+        android:text="Interested: 3"
         app:layout_constraintLeft_toRightOf="@id/otItemAvailable"
         app:layout_constraintTop_toBottomOf="@id/otItemDesc"
         app:layout_constraintRight_toRightOf="parent"
@@ -68,7 +68,7 @@
         android:id="@+id/otHashtags"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Hashtags:"
+        android:text="Hashtags: #Great #Wonderful #SleepDeprivation"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/otItemCost"/>
     <Button
